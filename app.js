@@ -11,7 +11,7 @@ function makeGrid(size) {
   paint();
 };
 
-makeGrid(30);
+makeGrid(16);
 
 // Event listeners on hover
 function paint() {
@@ -28,24 +28,23 @@ document.getElementById("size").addEventListener("click", event => {
     alert("Please select a size between 2 and 100");
     return;
   } else {
-    clearBoard();
+    resetBoard();
     makeGrid(size);
   }
 })
 
-const reset = document.getElementById("clear");
+// Erase painting
+const clear = document.getElementById("clear");
 
-reset.addEventListener("click", event => {
+clear.addEventListener("click", event => {
   document.querySelectorAll(".grid").forEach(item => {
       item.style.backgroundColor = "white";
   })
 })
 
-
-function clearBoard() {
+// Delete cells
+function resetBoard() {
   while (container.firstChild) {
     container.removeChild(container.firstChild)
   }
 }
-
-// TODO: separate clear board into removing divs and setting bgcolor white
