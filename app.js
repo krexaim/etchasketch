@@ -14,7 +14,6 @@ function makeGrid(size) {
 makeGrid(30);
 
 // Event listeners on hover
-
 function paint() {
   document.querySelectorAll(".grid").forEach(item => {
     item.addEventListener("mouseover", event => {
@@ -34,8 +33,19 @@ document.getElementById("size").addEventListener("click", event => {
   }
 })
 
+const reset = document.getElementById("clear");
+
+reset.addEventListener("click", event => {
+  document.querySelectorAll(".grid").forEach(item => {
+      item.style.backgroundColor = "white";
+  })
+})
+
+
 function clearBoard() {
   while (container.firstChild) {
     container.removeChild(container.firstChild)
   }
 }
+
+// TODO: separate clear board into removing divs and setting bgcolor white
