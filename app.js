@@ -11,3 +11,11 @@ function makeGrid(size) {
 };
 
 makeGrid(16);
+
+// Event listeners on hover
+
+document.querySelectorAll('.grid').forEach(item => {
+  item.addEventListener('mouseover', event => {
+    item.style.backgroundColor = "black";
+  } )
+})
