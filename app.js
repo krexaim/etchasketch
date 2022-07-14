@@ -21,9 +21,17 @@ document.querySelectorAll(".grid").forEach(item => {
 })
 
 // Prompt user for canvas size
-  //TODO: Alert popup when button clicked
-  //Save input into variable
 document.getElementById("size").addEventListener("click", event => {
-  let size = prompt("Canvas size");
-  makeGrid(size);
+  let size = prompt("Canvas size (between 2 and 100)");
+  if (size < 2 || size > 100 || isNaN(size)) {
+    alert("Please select a size between 2 and 100");
+    return;
+  } else {
+    clearBoard();
+    makeGrid(size);
+  }
 })
+
+function clearBoard() {
+  console.log("abc")
+}
