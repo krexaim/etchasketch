@@ -9,6 +9,7 @@ function makeGrid(size) {
     cell.classList.add("grid");
     container.appendChild(cell);
   };
+  container.style.gridTemplateColumns = (`repeat(${size}, 1fr`);
 };
 
 makeGrid(16);
