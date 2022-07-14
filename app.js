@@ -8,17 +8,19 @@ function makeGrid(size) {
     container.appendChild(cell);
   };
   container.style.gridTemplateColumns = (`repeat(${size}, 1fr`);
+  paint();
 };
 
 makeGrid(30);
 
 // Event listeners on hover
 
-document.querySelectorAll(".grid").forEach(item => {
-  item.addEventListener("mouseover", event => {
-    item.style.backgroundColor = "black";
-  } )
-})
+function paint() {
+  document.querySelectorAll(".grid").forEach(item => {
+    item.addEventListener("mouseover", event => {
+      item.style.backgroundColor = "black";
+    })
+  })}
 
 // Prompt user for canvas size
 document.getElementById("size").addEventListener("click", event => {
@@ -33,5 +35,7 @@ document.getElementById("size").addEventListener("click", event => {
 })
 
 function clearBoard() {
-  console.log("abc")
+  while (container.firstChild) {
+    container.removeChild(container.firstChild)
+  }
 }
