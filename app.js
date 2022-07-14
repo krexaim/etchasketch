@@ -22,7 +22,8 @@ document.querySelectorAll(".grid").forEach(item => {
 
 // Prompt user for canvas size
   //TODO: Alert popup when button clicked
-  //Sae input into variable
+  //Save input into variable
 document.getElementById("size").addEventListener("click", event => {
-  alert("S")
+  let size = prompt("Canvas size");
+  makeGrid(size);
 })
