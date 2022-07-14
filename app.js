@@ -10,12 +10,19 @@ function makeGrid(size) {
   container.style.gridTemplateColumns = (`repeat(${size}, 1fr`);
 };
 
-makeGrid(16);
+makeGrid(30);
 
 // Event listeners on hover
 
-document.querySelectorAll('.grid').forEach(item => {
-  item.addEventListener('mouseover', event => {
+document.querySelectorAll(".grid").forEach(item => {
+  item.addEventListener("mouseover", event => {
     item.style.backgroundColor = "black";
   } )
+})
+
+// Prompt user for canvas size
+  //TODO: Alert popup when button clicked
+  //Sae input into variable
+document.getElementById("size").addEventListener("click", event => {
+  alert("S")
 })
