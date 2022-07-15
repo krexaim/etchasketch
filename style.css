@@ -1,7 +1,21 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
 #container {
     display: grid;
-    height: 500px;
-    width: 500px;
+    height: 650px;
+    width: 650px;
     border-style: solid;
     border-width: 3px;
 }
